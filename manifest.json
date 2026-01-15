@@ -9,7 +9,7 @@
       "default_title": "__MSG_actionTitle__"
    },
    "description": "__MSG_extDescription__",
-   "homepage_url": "https://immmmm.com",
+   "homepage_url": "https://github.com/minyoad/memos-extention",
    "icons": {
       "128": "assets/logo.png",
       "16": "assets/logo.png",
