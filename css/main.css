@@ -133,6 +133,63 @@ input.inputer{border-bottom: 1px solid #ccc;width:75%;}
 #random svg.icon{padding:2px;width:19px;height:19px;}
 .common-tools-container svg.icon:hover{opacity: 1;}
 
+/* 工具提示样式 */
+.common-tools-container .mr-5 {
+    position: relative;
+    display: inline-block;
+}
+
+.common-tools-container .mr-5::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.common-tools-container .mr-5:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.common-tools-container .mr-5::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: #333;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 1001;
+    pointer-events: none;
+}
+
+.common-tools-container .mr-5:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.common-tools-container .mr-5::after {
+    margin-bottom: 10px;
+}
+
+.common-tools-container .mr-5::before {
+    margin-bottom: 0;
+}
 #locked,#taglist,#visibilitylis,#randomlist{display: none;}
 .tag-list,.visibility-list {
     margin-top: .5rem;
