@@ -248,7 +248,8 @@ $('#saveKey').click(function () {
     async: true,
     crossDomain: true,
     // 0.25.2版本后api/v1/auth/status 接口已移除
-    url: apiUrl + 'api/v1/auth/sessions/current',
+    // 接口又有改动，改为 /auth/me
+    url: apiUrl + 'api/v1/auth/me',
     method: 'GET',
     headers: {
       'Authorization': 'Bearer ' + apiTokens
