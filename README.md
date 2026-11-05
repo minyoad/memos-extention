@@ -6,6 +6,8 @@ Chrome 应用商店：<https://chrome.google.com/webstore/detail/memos-bber/cbhj
 
 ## 更新日志
 
+2026.11.05 不兼容更新，适配最新版 API（`/api` 无版本前缀）：`resources` 改为 `attachments`，更新接口需带 `updateMask`，详见 https://usememos.com/docs/api/latest
+
 2024.07.21 不兼容更新，已匹配 v0.22.3
 
 2024.06.15 感谢好心人 [PR#44](https://github.com/lmm214/memos-bber/pull/44)
